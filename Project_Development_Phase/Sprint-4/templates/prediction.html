@@ -1,0 +1,96 @@
+<html>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Century Gothic;
+}
+body{
+    background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0, 0, 50, 0.5)),url(prediction.jpg);
+    background-size: 1400px 650px;
+}
+.title h8{
+    color: #fff;
+    font-size: 20px;
+    top: 30%;
+    left: 17%;
+    position: absolute;
+}
+.title h5{
+    color: #fff;
+    font-size: 40px;
+    top: 20%;
+    left: 37%;
+    transform: translate(-20%,-37%);
+    position: absolute;
+}
+
+#pbutton{
+                 width: 300px;
+                 height: 30px;
+                 border: none;
+                 background-color: rgba(17, 139, 238, 0.747);
+                 border-radius: 10px;
+                 padding-top: 5px;
+                 color: whitesmoke;
+                 font-size: 16px;
+                 position: absolute;
+                 top:60%;
+                 left:37%;
+                 padding-bottom: 5px; 
+                 
+                }
+
+input[type="text"]{
+                width: 50%;
+                height: 3px;
+                padding: 20px;
+                margin: 5px 0 22px 0;
+                display: inline-block;
+                outline: black;
+                outline-style: auto;
+                background-color: whitesmoke;
+                align-self: auto; 
+                
+                
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+
+}
+
+
+
+    </style>
+    
+    <body>
+       
+        <section class="about">
+            <div class="main">
+                <div class="title">
+                   
+                    <h5>Phishing Website Detection</h5>
+                    
+                    <h8>Beware of phishing websites that are taking your sensitive information and login passwords.
+                    </h8>
+                    <form action="/y_predict" method="POST">
+                    <div class="search-box">
+                        <input class="search-txt" type="text" name="url" id="url" placeholder="Enter your link">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <input type="submit" name="PREDICT" id="pbutton" value="PREDICT" >
+                </form>
+                </div>
+                
+            </div>
+        </section>
+    <h3 style="text-align:center; color:#fff; font-size:20px; position: absolute; top: 70%;left:35%">{{ans}}</h3>
+    <h3 style="text-align:center; color:red; font-size:20px; position: absolute; top: 70%;left:35%">{{bns}}</h3>
+    </body>
+</html>

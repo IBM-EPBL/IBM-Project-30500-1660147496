@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>REGISTER</title>
+        <style>
+            
+            *{
+                box-sizing: border-box;
+            }
+            .Container{
+                padding: 16px;
+                background-color: transparent;
+                text-align: center;    
+            }
+            form{
+                border: 1px solid silver;
+                width: 400px;
+                margin: auto;
+            }
+            body{
+                 background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0, 0, 50, 0.5)),url(signup.jpg);
+                 background-size: 1400px 650px;
+                 font-family: Arial,Arial, Helvetica, sans-serif;
+                 color: white;
+            }
+            input[type="text"],input[type="email"],input[type="password"]{
+                width: 50%;
+                height: 5px;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                display: inline-block;
+                outline: white;
+                outline-style: auto;
+                background-color: transparent;
+                align-self: auto;    
+            }
+            input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus{
+                background-color: white;
+                outline: none;    
+            }
+             #regbtn{
+                 width: 300px;
+                 height: 30px;
+                 border: none;
+                 background-color: turquoise;
+                 border-radius: 10px;
+                 padding-left: 7px;
+                 color: white;
+                 font-size: 16px;
+             }
+            a{
+                 color: blue;
+            }
+            .Login{
+                 text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Container">
+        <form>
+            <centre>
+            <h1>REGISTER</h1>
+            <p>
+                Please fill this form to create an account
+            </p>
+
+           
+            
+            <label>Username :</label>
+            <input type="text" name="name" placeholder="Enter your name" required="">
+            <br>
+
+            <label>Email :</label>
+            <input type="email" name="email" placeholder="Enter your emailid" required="">
+            <br>
+
+            <label>Password :</label>
+            <input type="password" name="password" placeholder="password" required="">
+            <br>
+
+                       
+            <a href="{{ url_for('predictform') }}"><input type="submit" name="register" id = "regbtn" value="REGISTER"></a>
+            <br><br>
+        
+            
+      
+        </centre>
+         </form>
+         
+        </div>
+        </form>
+    </body>
+</html>

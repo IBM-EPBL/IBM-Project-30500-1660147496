@@ -1,0 +1,95 @@
+<html>
+<head></head>
+<style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+}
+body{
+    background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0, 0, 50, 0.5)),url(https://zvelo.com/wp-content/uploads/2019/08/the-rise-of-single-use-phishing-urls-2-web.jpg);
+    background-size: 1400px 650px;
+}
+.title h8{
+    color: #fff;
+    font-size: 20px;
+    top: 30%;
+    left: 40%;
+    transform: translate(-30%,-40%);
+    position: absolute;
+}
+.title h5{
+    color: #fff;
+    font-size: 40px;
+    top: 20%;
+    left: 32%;
+    transform: translate(-20%,-32%);
+    position: absolute;
+}
+ul li a{
+    background-color: turquoise;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    padding: 20px 40px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+    font: 18px Arial,Helvetica, sans-serif;
+    
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%,-47%);
+    position: absolute;
+}
+ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+p a{
+    position: absolute;
+    top: 5%;
+    left: 85%;
+    list-style-type: none;
+    margin: 25px;
+}
+p a{
+    display: inline-block;
+    background-color: rgb(243, 250, 144);
+}
+
+p a{
+    text-decoration: none;
+    color:  rgb(0, 78, 74);
+    padding: 5px 20px;
+    border: 1px whitesmoke;
+    transition: 0.6s ease;
+    font-weight: 700;
+}
+
+    </style>
+   
+
+<body>
+    <div class="predictform">
+    <form action="{{ url_for('predictform') }}" method="post">
+        <div class="main">
+            <div class="title">
+            <h5>SOLUTION TO DETECT PHISHING WEBSITES</h5><br>
+            <br>
+            <h8>Be aware of what's happening with your confidential data</h8>
+        </div>
+            
+             <ul>
+                
+                <li><a href="{{ url_for('result') }}">Let's Check Your Website</a></li>
+                
+               
+            </ul>
+            
+        </div>
+    </form>  
+</div>
+<p><a href="{{ url_for('homepage') }}">GO BACK</a></p>
+{{msg}}
+</body>
+</html>
